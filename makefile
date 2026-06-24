@@ -1,10 +1,14 @@
-.PHONY: env clean run-prod run-stag build-prod build-stag
+.PHONY: env slang clean run-prod run-stag build-prod build-stag
 
 # Generate environment config files
 env:
 	fvm dart run build_runner build \
 		--delete-conflicting-outputs \
 		--build-filter="lib/config/env/**"
+
+# Generate localization files
+slang:
+	fvm dart run slang
 
 # Clean build artifacts
 clean:

@@ -1,0 +1,10 @@
+{
+  "app": {
+    "title": "Paper Horizon"
+  },
+  "home": {
+    "title": "Halaman Beranda Flutter Demo",
+    "description": "Anda telah menekan tombol sebanyak:",
+    "increment": "Tambah"
+  }
+}
