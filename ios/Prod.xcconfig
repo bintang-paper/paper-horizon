@@ -1,0 +1,5 @@
+#include "Flutter/Generated.xcconfig"
+
+// Production Configuration
+APP_DISPLAY_NAME = Paper Horizon
+PRODUCT_BUNDLE_IDENTIFIER = id.paper.horizon
