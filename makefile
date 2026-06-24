@@ -1,4 +1,4 @@
-.PHONY: env slang clean run-prod run-stag build-prod build-stag
+.PHONY: env slang icons-prod icons-stag icons clean run-prod run-stag build-prod build-stag
 
 # Generate environment config files
 env:
@@ -9,6 +9,20 @@ env:
 # Generate localization files
 slang:
 	fvm dart run slang
+
+# Generate launcher icons for production flavor
+icons-prod:
+	fvm dart run flutter_launcher_icons -f flutter_launcher_icons-prod.yaml
+
+# Generate launcher icons for staging flavor
+icons-stag:
+	fvm dart run flutter_launcher_icons -f flutter_launcher_icons-stag.yaml
+
+# Generate launcher icons for all flavors
+icons:
+	fvm flutter pub get
+	$(MAKE) icons-prod
+	$(MAKE) icons-stag
 
 # Clean build artifacts
 clean:
