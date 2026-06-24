@@ -1,4 +1,4 @@
-.PHONY: env slang icons-prod icons-stag icons clean run-prod run-stag build-prod build-stag
+.PHONY: env slang icons-prod icons-stag icons splash-prod splash-stag splash splash-remove clean run-prod run-stag build-prod build-stag
 
 # Generate environment config files
 env:
@@ -23,6 +23,17 @@ icons:
 	fvm flutter pub get
 	$(MAKE) icons-prod
 	$(MAKE) icons-stag
+
+# Generate splash screens for all flavors
+splash:
+	fvm flutter pub get
+	fvm dart run flutter_native_splash:create --path=flutter_native_splash-prod.yaml --flavor prod
+	fvm dart run flutter_native_splash:create --path=flutter_native_splash-stag.yaml --flavor stag
+
+# Remove generated native splash screens and restore defaults
+splash-remove:
+	fvm dart run flutter_native_splash:remove --path=flutter_native_splash-prod.yaml --flavor prod
+	fvm dart run flutter_native_splash:remove --path=flutter_native_splash-stag.yaml --flavor stag
 
 # Clean build artifacts
 clean:
