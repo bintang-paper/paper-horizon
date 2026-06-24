@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.paper_horizon"
+    namespace = "id.paper.horizon"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -15,14 +15,25 @@ android {
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.example.paper_horizon"
+        applicationId = "id.paper.horizon"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+    }
+
+    flavorDimensions += "environment"
+
+    productFlavors {
+        create("prod") {
+            dimension = "environment"
+        }
+        create("stag") {
+            dimension = "environment"
+            applicationIdSuffix = ".stag"
+        }
     }
 
     buildTypes {
