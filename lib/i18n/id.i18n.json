@@ -6,5 +6,18 @@
     "title": "Halaman Beranda Flutter Demo",
     "description": "Anda telah menekan tombol sebanyak:",
     "increment": "Tambah"
+  },
+  "errors": {
+    "network": {
+      "unknown_error": "Terjadi kesalahan. Silakan coba lagi nanti.",
+      "no_internet_connection": "Tidak ada koneksi internet.",
+      "connection_timeout": "Waktu koneksi habis.",
+      "receive_timeout": "Waktu terima habis.",
+      "request_cancelled": "Permintaan dibatalkan.",
+      "unauthorized": "Tidak diotorisasi.",
+      "forbidden": "Terlarang.",
+      "not_found": "Sumber tidak ditemukan.",
+      "internal_server_error": "Kesalahan server internal."
+    }
   }
 }

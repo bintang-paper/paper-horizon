@@ -42,6 +42,7 @@ class Translations with BaseTranslations<AppLocale, Translations> {
 	// Translations
 	late final Translations$app$en app = Translations$app$en._(_root);
 	late final Translations$home$en home = Translations$home$en._(_root);
+	late final Translations$errors$en errors = Translations$errors$en._(_root);
 }
 
 // Path: app
@@ -74,6 +75,52 @@ class Translations$home$en {
 	String get increment => 'Increment';
 }
 
+// Path: errors
+class Translations$errors$en {
+	Translations$errors$en._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	late final Translations$errors$network$en network = Translations$errors$network$en._(_root);
+}
+
+// Path: errors.network
+class Translations$errors$network$en {
+	Translations$errors$network$en._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Something went wrong. Please try again later.'
+	String get unknown_error => 'Something went wrong. Please try again later.';
+
+	/// en: 'No internet connection.'
+	String get no_internet_connection => 'No internet connection.';
+
+	/// en: 'Connection timeout.'
+	String get connection_timeout => 'Connection timeout.';
+
+	/// en: 'Receive timeout.'
+	String get receive_timeout => 'Receive timeout.';
+
+	/// en: 'Request cancelled.'
+	String get request_cancelled => 'Request cancelled.';
+
+	/// en: 'Unauthorized.'
+	String get unauthorized => 'Unauthorized.';
+
+	/// en: 'Forbidden.'
+	String get forbidden => 'Forbidden.';
+
+	/// en: 'Resource not found.'
+	String get not_found => 'Resource not found.';
+
+	/// en: 'Internal server error.'
+	String get internal_server_error => 'Internal server error.';
+}
+
 /// The flat map containing all translations for locale <en>.
 /// Only for edge cases! For simple maps, use the map function of this library.
 ///
@@ -86,6 +133,15 @@ extension on Translations {
 			'home.title' => 'Flutter Demo Home Page',
 			'home.description' => 'You have pushed the button this many times:',
 			'home.increment' => 'Increment',
+			'errors.network.unknown_error' => 'Something went wrong. Please try again later.',
+			'errors.network.no_internet_connection' => 'No internet connection.',
+			'errors.network.connection_timeout' => 'Connection timeout.',
+			'errors.network.receive_timeout' => 'Receive timeout.',
+			'errors.network.request_cancelled' => 'Request cancelled.',
+			'errors.network.unauthorized' => 'Unauthorized.',
+			'errors.network.forbidden' => 'Forbidden.',
+			'errors.network.not_found' => 'Resource not found.',
+			'errors.network.internal_server_error' => 'Internal server error.',
 			_ => null,
 		};
 	}

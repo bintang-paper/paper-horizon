@@ -1,5 +1,6 @@
 import 'package:get_it/get_it.dart';
 import 'package:paper_horizon/config/env/env.dart';
+import 'package:paper_horizon/core/network/network_di.dart';
 import 'package:paper_horizon/core/storage/storage_di.dart';
 
 GetIt getIt = GetIt.I;
@@ -11,4 +12,7 @@ Future<void> setUpDI(EnvFlavor flavor) async {
 
   /// Storage
   await setUpStorageDI();
+
+  /// Network
+  await setUpNetworkDI();
 }

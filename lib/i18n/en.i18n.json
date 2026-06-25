@@ -6,5 +6,18 @@
     "title": "Flutter Demo Home Page",
     "description": "You have pushed the button this many times:",
     "increment": "Increment"
+  },
+  "errors": {
+    "network": {
+      "unknown_error": "Something went wrong. Please try again later.",
+      "no_internet_connection": "No internet connection.",
+      "connection_timeout": "Connection timeout.",
+      "receive_timeout": "Receive timeout.",
+      "request_cancelled": "Request cancelled.",
+      "unauthorized": "Unauthorized.",
+      "forbidden": "Forbidden.",
+      "not_found": "Resource not found.",
+      "internal_server_error": "Internal server error."
+    }
   }
 }
