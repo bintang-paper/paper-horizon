@@ -1,10 +1,12 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:paper_horizon/config/env/env.dart';
 import 'package:paper_horizon/core/di/di.dart';
 import 'package:paper_horizon/core/network/interceptor/auth_interceptor.dart';
 import 'package:paper_horizon/core/network/interceptor/interceptor_di.dart';
 import 'package:paper_horizon/core/network/network_client.dart';
 import 'package:paper_horizon/core/network/network_error_handler.dart';
+import 'package:talker_dio_logger/talker_dio_logger.dart';
 
 Future<void> setUpNetworkDI() async {
   final Environment environment = getIt<Environment>();
@@ -32,6 +34,13 @@ Future<void> setUpNetworkDI() async {
       );
 
       // Add interceptors
+      if (environment.flavor.isStaging || kDebugMode) {
+        dio.interceptors.add(
+          TalkerDioLogger(
+            settings: const TalkerDioLoggerSettings(printResponseHeaders: true),
+          ),
+        );
+      }
       dio.interceptors.add(getIt<AuthInterceptor>());
 
       return dio;
