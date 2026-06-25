@@ -41,6 +41,7 @@ class Translations with BaseTranslations<AppLocale, Translations> {
 
 	// Translations
 	late final Translations$app$en app = Translations$app$en._(_root);
+	late final Translations$login$en login = Translations$login$en._(_root);
 	late final Translations$home$en home = Translations$home$en._(_root);
 	late final Translations$errors$en errors = Translations$errors$en._(_root);
 }
@@ -55,6 +56,117 @@ class Translations$app$en {
 
 	/// en: 'Paper Horizon'
 	String get title => 'Paper Horizon';
+}
+
+// Path: login
+class Translations$login$en {
+	Translations$login$en._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Spender — Login (Voyager)'
+	String get page_title => 'Spender — Login (Voyager)';
+
+	/// en: 'Email or Phone Number'
+	String get lbl_email_or_phone => 'Email or Phone Number';
+
+	/// en: 'e.g. priska@paper.id or 08123456789'
+	String get placeholder_email_or_phone => 'e.g. priska@paper.id or 08123456789';
+
+	/// en: 'Email or phone number is not valid'
+	String get error_invalid_credential => 'Email or phone number is not valid';
+
+	/// en: 'Log In'
+	String get btn_login => 'Log In';
+
+	/// en: 'Continue'
+	String get btn_continue => 'Continue';
+
+	/// en: 'Verify'
+	String get btn_verify => 'Verify';
+
+	/// en: 'Resend'
+	String get btn_resend => 'Resend';
+
+	/// en: 'Forgot password?'
+	String get btn_forgot_password => 'Forgot password?';
+
+	/// en: 'Enter Password'
+	String get lbl_enter_password => 'Enter Password';
+
+	/// en: 'Password'
+	String get lbl_password => 'Password';
+
+	/// en: 'Enter your password'
+	String get placeholder_password => 'Enter your password';
+
+	/// en: 'Enter your password'
+	String get pwd_title => 'Enter your password';
+
+	/// en: 'Logging in as <strong id="pwdIdentity">priska@paper.id</strong>'
+	String get pwd_desc => 'Logging in as <strong id="pwdIdentity">priska@paper.id</strong>';
+
+	/// en: 'Logging in as <span id="pwdSheetIdentity">email@example.com</span>'
+	String get pwd_desc_sheet => 'Logging in as <span id="pwdSheetIdentity">email@example.com</span>';
+
+	/// en: 'Incorrect password. Please try again.'
+	String get pwd_error => 'Incorrect password. Please try again.';
+
+	/// en: 'Enter OTP Code'
+	String get otp_title => 'Enter OTP Code';
+
+	/// en: 'We sent a 6-digit code to <strong id="otpDestination">+62 812-3456-789</strong>. Please enter it below.'
+	String get otp_desc => 'We sent a 6-digit code to <strong id="otpDestination">+62 812-3456-789</strong>. Please enter it below.';
+
+	/// en: 'Invalid OTP. Please try again.'
+	String get otp_error => 'Invalid OTP. Please try again.';
+
+	/// en: 'Didn't receive a code? '
+	String get resend_prompt => 'Didn\'t receive a code? ';
+
+	/// en: 'How would you like to verify?'
+	String get verify_title => 'How would you like to verify?';
+
+	/// en: 'Choose a verification method to continue'
+	String get verify_subtitle => 'Choose a verification method to continue';
+
+	/// en: 'Verification via SMS'
+	String get method_sms => 'Verification via SMS';
+
+	/// en: 'Receive a 6-digit code by text message'
+	String get method_sms_desc => 'Receive a 6-digit code by text message';
+
+	/// en: 'Verification via WhatsApp'
+	String get method_wa => 'Verification via WhatsApp';
+
+	/// en: 'Receive a 6-digit code on WhatsApp'
+	String get method_wa_desc => 'Receive a 6-digit code on WhatsApp';
+
+	/// en: 'Enter Password'
+	String get method_pwd => 'Enter Password';
+
+	/// en: 'Use your account password to sign in'
+	String get method_pwd_desc => 'Use your account password to sign in';
+
+	/// en: 'Verification via Email'
+	String get method_email => 'Verification via Email';
+
+	/// en: 'Receive a 6-digit code by email'
+	String get method_email_desc => 'Receive a 6-digit code by email';
+
+	/// en: 'New device detected'
+	String get new_device_title => 'New device detected';
+
+	/// en: 'Choose how you'd like to verify your identity'
+	String get new_device_subtitle => 'Choose how you\'d like to verify your identity';
+
+	/// en: 'Welcome back, <span id="successName">Priska</span>'
+	String get welcome_back => 'Welcome back, <span id="successName">Priska</span>';
+
+	/// en: 'Choose a company to continue'
+	String get choose_company_subtitle => 'Choose a company to continue';
 }
 
 // Path: home
@@ -130,6 +242,40 @@ extension on Translations {
 	dynamic _flatMapFunction(String path) {
 		return switch (path) {
 			'app.title' => 'Paper Horizon',
+			'login.page_title' => 'Spender — Login (Voyager)',
+			'login.lbl_email_or_phone' => 'Email or Phone Number',
+			'login.placeholder_email_or_phone' => 'e.g. priska@paper.id or 08123456789',
+			'login.error_invalid_credential' => 'Email or phone number is not valid',
+			'login.btn_login' => 'Log In',
+			'login.btn_continue' => 'Continue',
+			'login.btn_verify' => 'Verify',
+			'login.btn_resend' => 'Resend',
+			'login.btn_forgot_password' => 'Forgot password?',
+			'login.lbl_enter_password' => 'Enter Password',
+			'login.lbl_password' => 'Password',
+			'login.placeholder_password' => 'Enter your password',
+			'login.pwd_title' => 'Enter your password',
+			'login.pwd_desc' => 'Logging in as <strong id="pwdIdentity">priska@paper.id</strong>',
+			'login.pwd_desc_sheet' => 'Logging in as <span id="pwdSheetIdentity">email@example.com</span>',
+			'login.pwd_error' => 'Incorrect password. Please try again.',
+			'login.otp_title' => 'Enter OTP Code',
+			'login.otp_desc' => 'We sent a 6-digit code to <strong id="otpDestination">+62 812-3456-789</strong>. Please enter it below.',
+			'login.otp_error' => 'Invalid OTP. Please try again.',
+			'login.resend_prompt' => 'Didn\'t receive a code? ',
+			'login.verify_title' => 'How would you like to verify?',
+			'login.verify_subtitle' => 'Choose a verification method to continue',
+			'login.method_sms' => 'Verification via SMS',
+			'login.method_sms_desc' => 'Receive a 6-digit code by text message',
+			'login.method_wa' => 'Verification via WhatsApp',
+			'login.method_wa_desc' => 'Receive a 6-digit code on WhatsApp',
+			'login.method_pwd' => 'Enter Password',
+			'login.method_pwd_desc' => 'Use your account password to sign in',
+			'login.method_email' => 'Verification via Email',
+			'login.method_email_desc' => 'Receive a 6-digit code by email',
+			'login.new_device_title' => 'New device detected',
+			'login.new_device_subtitle' => 'Choose how you\'d like to verify your identity',
+			'login.welcome_back' => 'Welcome back, <span id="successName">Priska</span>',
+			'login.choose_company_subtitle' => 'Choose a company to continue',
 			'home.title' => 'Flutter Demo Home Page',
 			'home.description' => 'You have pushed the button this many times:',
 			'home.increment' => 'Increment',
